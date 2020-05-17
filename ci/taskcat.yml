@@ -17,6 +17,8 @@ global:
     - us-east-2
     - us-west-1
     - us-west-2
+    - cn-north-1
+    - cn-northwest-1
   reporting: true
 tests:
   vpc-defaults:
@@ -68,3 +70,14 @@ tests:
     regions:
       - us-west-1
     template_file: aws-vpc.template
+  3az-cn-northwest-1:
+    parameter_input: aws-vpc-3az.json
+    regions:
+      - cn-northwest-1
+    template_file: aws-vpc.template
+  2az-cn-north-1:
+    parameter_input: aws-vpc-defaults.json
+    regions:
+      - cn-north-1
+    template_file: aws-vpc.template
+
